@@ -1,12 +1,12 @@
-import { useState } from "react";
+import { useState } from 'react';
 
-import QuestionTimer from "./QuestionTimer.jsx";
-import Answers from "./Answers.jsx";
-import QUESTIONS from "../questions.js";
+import QuestionTimer from './QuestionTimer.jsx';
+import Answers from './Answers.jsx';
+import QUESTIONS from '../questions.js';
 
-export default function Question(index, onSelectAnswer, onSkipAnswer) {
+export default function Question({ index, onSelectAnswer, onSkipAnswer }) {
   const [answer, setAnswer] = useState({
-    selectedAnswer: "",
+    selectedAnswer: '',
     isCorrect: null,
   });
 
@@ -38,18 +38,12 @@ export default function Question(index, onSelectAnswer, onSkipAnswer) {
     }, 1000);
   }
 
-  let answerState = "";
-
-  console.log(`index ${index}`)
-  console.log(`QUESTIONS ${QUESTIONS}`)
-  // console.log(QUESTIONS[index])
-  // console.log(QUESTIONS[index].text)
-
+  let answerState = '';
 
   if (answer.selectedAnswer && answer.isCorrect !== null) {
-    answerState = answer.isCorrect ? "correct" : "wrong";
+    answerState = answer.isCorrect ? 'correct' : 'wrong';
   } else if (answer.selectedAnswer) {
-    answerState = "answered";
+    answerState = 'answered';
   }
 
   return (

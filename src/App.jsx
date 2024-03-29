@@ -1,7 +1,7 @@
-import Header from "./components/Header.jsx";
-import Quiz from "./components/Quiz.jsx";
+import Header from './components/Header.jsx';
+import Quiz from './components/Quiz.jsx';
 
-export default function App() {
+function App() {
   return (
     <>
       <Header />
@@ -12,3 +12,4 @@ export default function App() {
   );
 }
 
+export default App;
